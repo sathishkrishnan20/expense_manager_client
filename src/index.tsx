@@ -6,16 +6,37 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './store'
-
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+const theme = createTheme({
+  // components: {
+  //   MuiTextField: {
+  //     styleOverrides: {
+  //         root: {
+  //           marginTop: 10,
+  //         } 
+  //     }
+  //   },
+  //   MuiInputLabel: {
+  //     styleOverrides: {
+  //       root: {
+  //         marginTop: 10,
+  //         marginBottom: 10,
+  //       }
+  //     }
+  //   }
+  // }
+});
 root.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
-      <App />  
+      <ThemeProvider theme={theme}>
+        <App />  
+      </ThemeProvider>
     </BrowserRouter>
     </Provider>
   </React.StrictMode>

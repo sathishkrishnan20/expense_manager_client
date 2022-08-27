@@ -6,14 +6,14 @@ import Login from './screens/login/Login';
 import Register from './screens/register/Register';
 // import './App.css';
 import './scss/style.scss'
-
+import Button from "@mui/material/Button";
 function App() {
   //const Login = React.lazy(() => import('./screens/Login/Login'))
   // const Home = React.lazy(() => import('./screens/home/index'))
   
   return (
    
-        
+   
     
           <Routes>
             <Route path="/login" element={<Login />} />
