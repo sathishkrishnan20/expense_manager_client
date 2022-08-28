@@ -35,8 +35,6 @@ function AddExpenses() {
 
     return (
         <Paper>
-            
-        
         <Box m={8} pt={8}>
             <h2>Add Income</h2>
             
